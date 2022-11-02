@@ -1,0 +1,60 @@
+* {
+    padding: 0em;
+    margin: 0em;
+}
+
+:root {
+    --bgcolor: #0365AE;
+    --txtcolor: white;
+    --breadcolor: #00163F;
+    --newscolor: #0365AE;
+    --newtxtcolor: #000000;
+    --contentxtcolor: #000000;
+    --contentbgcolur: white;
+    --linkcolor: white;
+    --visitedcolor: #F3C4B2;
+}
+
+html, body {
+    font-size: 100%;
+    font-family: "Verdana", sans-serif;
+    line-height: 1.5em;
+    margin: auto;
+    
+    
+}
+html {
+    background-image: url(images/bg.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+}
+body {
+    max-width: 1024px;
+    background-color: blue;
+}
+
+header {
+    max-width: 1024px;
+   
+}
+#breadcrumb {
+    background-color: var(--breadcolor);
+
+}
+#menu {
+    float: left;
+    background-color: var(--linkcolor);
+}
+
+aside h2 {
+    background-color:var(--newscolor);
+}
+
+aside {
+    float: right;
+}
+
+footer {
+    background-color: var(--breadcolor);
+}
