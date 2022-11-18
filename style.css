@@ -5,7 +5,7 @@
 
 :root {
 	--bgcolor: #0365AE;
-	--txtcolor: #fff;
+	--txtcolor: rgb(255, 255, 255);
 	--breadcolor: #163f77;
 	--newscolor: #F3C42B;
 	--newstxtcolor: #000;
@@ -13,6 +13,7 @@
 	--contentbgcolor: #fff;
 	--linkcolor: #fff;
 	--visitedcolor: #F3C42B;
+	--bordercolor: #000;
 }
 
 html, body {
@@ -27,12 +28,18 @@ html, body {
 html {
 	background-image: url('images/bg.png');
 	background-size: cover;
-    background-repeat: no-repeat;
+    /*background-repeat: no-repeat;*/
+	background-attachment: fixed;
 }
 
 body {
+	color: var(--contentxtcolor);
 	max-width: 1024px;
 	border: 1px solid #000;
+	background-color: var(--bgcolor);
+    border-style: solid;
+    border-width: 0.15em;
+    border-color: var(--bordercolor);
 }
 
 header {
@@ -69,7 +76,11 @@ header h2 {
 	color: var(--txtcolor);
 	font-size: 1.1em;
 	padding: 0.5em 0em 0.5em 1.0em;
-	border: 1px solid #000;
+    border-style: solid;
+    border-width: 0.15em;
+    border-color: var(--bordercolor);
+    border-left: 0em;
+    border-right: 0em;
 }
 
 #breadcrumb a:link {
@@ -142,10 +153,111 @@ aside dt {
 }
 
 main {
-	margin-left: 28%;
-	color: var(--contentxtcolor);
- 	background-color: var(--contentbgcolor);
- 	
+    background-color: var(--contentbgcolor);
+    margin-left: 25%;
+    padding: 1.5em;
+    padding-top: 1em;
+    border-style: solid;
+    border-width: 0.15em;
+    border-color: var(--bordercolor);
+    border-top: 0em;
+    border-bottom: 0em;
+    border-right: 0em;
+}
+
+main>p {
+    margin-bottom: 0.5em;
+    padding: 0em 2em;
+}
+
+main h1 {
+    line-height: 1.5em;
+    margin-bottom: 1em;
+    margin: 0em 1em;
+    text-align: center;
+}
+
+main>h2 {
+    line-height: 1.5em;
+    margin: 0.7em 2em;
+    text-align: left;
+}
+
+main>dl {
+    margin: 0em 3em;
+}
+
+main>dl>dt {
+    padding-left: 1.2em;
+    background-image: url(./images/favicon-32x32.png);
+    background-repeat: no-repeat;
+    background-size: 1em;
+    background-position-y: center;
+}
+
+main>dl>dd {
+    padding-left: 1.2em;
+}
+
+main>ul {
+    margin-left: 4.5em;
+}
+
+main>img {
+    float: left;
+    max-width: 40%;
+    shape-outside: margin-box;
+    border-radius: 0 20% 20% 0 /40%;
+    margin: 0em 2em 1em 2em;
+}
+
+#squadra {
+    display: block;
+    width: 90%;
+    margin: 0em 2.3em;
+}
+
+#squadra em {
+    font-style: italic;
+}
+
+#squadra>dt {
+    color: var(--txtcolor);
+    background: var(--breadcolor);
+    font-weight: bold;
+    margin-top: 1em;
+    padding-top: 0.5em;
+    height: 2em;
+}
+
+#squadra>dd {
+    border-color: var(--bordercolor);
+    border-width: .15em;
+    border-style: solid;
+    border-top: none;
+}
+
+#squadra>dd img {
+    float: left;
+    max-width: 20%;
+}
+
+#squadra>dd>dl {
+    margin-left: 25%;
+}
+
+#squadra>dd>dl>dt {
+    float: left;
+    font-weight: bold;
+}
+
+#squadra>dd>dl>dt::after {
+    content: "\00a0";
+}
+
+#squadra>dd>dl>dd ul {
+    clear: both;
+    margin-left: 2em;
 }
 
 footer {
